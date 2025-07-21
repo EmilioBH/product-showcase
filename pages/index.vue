@@ -8,7 +8,7 @@
       />
     </Head>
     <h1 class="page-title">Our Products</h1>
-    <div v-if="pending" class="state-container">Cargando productos...</div>
+    <div v-if="pending" class="state-container">Loading products...</div>
     <div v-else-if="error" class="state-container error">
       Error al cargar los productos: {{ error.message }}
     </div>
@@ -27,7 +27,8 @@
 import type { Product } from '~/types/index';
 import ProductCard from '~/components/ProductCard.vue';
 
-const { data: products, pending, error } = await useFetch<Product[]>('/api/products');</script>
+const { data: products, pending, error } = await useFetch<Product[]>('/api/products', {lazy: true});
+</script>
 
 <style lang="scss" scoped>
 .page-title {
