@@ -5,6 +5,17 @@ export default defineNuxtConfig({
   // Make SCSS variables and mixins available globally
   css: ['~/styles/main.scss'],
 
+  modules: [
+    '@nuxtjs/google-fonts',
+    '@nuxtjs/fontaine',
+  ],
+
+  googleFonts: {
+    families: {
+      Nunito: [400, 600, 800],
+    }
+  },
+
   vite: {
     css: {
       preprocessorOptions: {
