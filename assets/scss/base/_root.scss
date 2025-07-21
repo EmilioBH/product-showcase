@@ -1,0 +1,19 @@
+:root {
+  // Colors
+  --color-primary: #3498db;
+  --color-secondary: #2ecc71;
+  --color-dark: #2c3e50;
+  --color-text: #333333;
+  --color-text-secondary: #555555;
+  --color-headings: var(--color-dark);
+  --color-border: #dddddd;
+  --color-background: #f4f4f9;
+  
+  // Typography
+  --font-family-base: 'Nunito', sans-serif;
+  --font-size-base: 16px;
+  --line-height-base: 1.6;
+
+  // Borders & Shadows
+  --border-radius: 8px;
+}
