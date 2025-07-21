@@ -24,7 +24,7 @@
 </template>
 
 <script setup lang="ts">
-import type { Product } from '~/types/Product';
+import type { Product } from '~/types/index';
 import ProductCard from '~/components/ProductCard.vue';
 
 const { data: products, pending, error } = await useFetch<Product[]>('/api/products');</script>
