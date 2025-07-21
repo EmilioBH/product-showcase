@@ -6,7 +6,9 @@
         </svg>
     </NuxtLink>  
     <div>
-        <div v-if="pending">Loading products...</div>
+        <div v-if="pending">
+            <ProductDetailSkeleton />
+        </div>
         <div v-else-if="product">
         <ProductDetail :product="product" />
         </div>
@@ -17,11 +19,14 @@
 <script setup lang="ts">
 import type { Product } from '~/types/index';
 import ProductDetail from '~/components/ProductDetails.vue';
+import ProductDetailSkeleton from '~/components/ProductDetailSkeleton.vue';
 
 const route = useRoute();
 const id = route.params.id;
+const url = `/api/products/${id}`;
 
-const { data: product, pending, error } = await useFetch<Product>(`/api/products/${id}`);
+
+const { data: product, pending, error } = await useFetch<Product>(url, { lazy: true });
 
 if (error.value) {
   throw createError({ 
