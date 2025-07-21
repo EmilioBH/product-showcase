@@ -1,11 +1,13 @@
 <template>
-  <article class="product-card">
-    <img class="product-card__image" :src="product.image" :alt="product.name" />
-    <div class="product-card__content">
-      <h2 class="product-card__name">{{ product.name }}</h2>
-      <p class="product-card__price">{{ formatCurrency(product.price) }}</p>
-    </div>
-  </article>
+  <NuxtLink :to="`/products/${product.id}`" class="product-card-link">
+    <article class="product-card">
+      <img class="product-card__image" :src="product.image" :alt="product.name" />
+      <div class="product-card__content">
+        <h2 class="product-card__name">{{ product.name }}</h2>
+        <p class="product-card__price">{{ formatCurrency(product.price) }}</p>
+      </div>
+    </article>
+  </NuxtLink>  
 </template>
 
 <script setup lang="ts">
@@ -18,6 +20,12 @@ defineProps<{
 </script>
 
 <style lang="scss" scoped>
+.product-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 .product-card {
   border: 1px solid #ddd;
   border-radius: 8px;
