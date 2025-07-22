@@ -7,13 +7,26 @@
         content="Browse our amazing collection of products."
       />
     </Head>
-    <h1 class="page-title">Our Products</h1>
-    <div v-if="pending" class="state-container">Loading products...</div>
-    <div v-else-if="error" class="state-container error">
+    <h1 class="page-title">
+      Our Products
+    </h1>
+    <div
+      v-if="pending"
+      class="state-container"
+    >
+      Loading products...
+    </div>
+    <div
+      v-else-if="error"
+      class="state-container error"
+    >
       Error al cargar los productos: {{ error.message }}
     </div>
 
-    <div v-else-if="products" class="product-grid">
+    <div
+      v-else-if="products"
+      class="product-grid"
+    >
       <ProductCard
         v-for="product in products"
         :key="product.id"

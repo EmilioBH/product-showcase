@@ -1,12 +1,20 @@
 <template>
   <div class="error-page">
     <div class="error-content">
-      <p class="error-status-code">{{ error.statusCode }}</p>
-      <h1 class="error-title">Page Not Found</h1>
+      <p class="error-status-code">
+        {{ error.statusCode }}
+      </p>
+      <h1 class="error-title">
+        Page Not Found
+      </h1>
       <p class="error-description">
         Sorry, the page you are looking for does not exist or has been moved.
       </p>
-      <button class="error-button" @click="handleClearError" aria-label="Go back to home page">
+      <button
+        class="error-button"
+        aria-label="Go back to home page"
+        @click="handleClearError"
+      >
         Go Back Home
       </button>
     </div>
@@ -16,10 +24,10 @@
 <script setup lang="ts">
 defineProps<{
   error: {
-    statusCode: number;
-    statusMessage: string;
-    message: string;
-  };
+    statusCode: number,
+    statusMessage: string,
+    message: string,
+  }
 }>();
 
 const handleClearError = () => {

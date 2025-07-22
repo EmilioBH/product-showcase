@@ -1,17 +1,31 @@
 <template>
   <div class="page-container">
-    <NuxtLink to="/" class="back-link" aria-label="Come back to the product list">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
-        </svg>
+    <NuxtLink
+      to="/"
+      class="back-link"
+      aria-label="Come back to the product list"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="3"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+        />
+      </svg>
     </NuxtLink>  
     <div>
-        <div v-if="pending">
-            <ProductDetailSkeleton />
-        </div>
-        <div v-else-if="product">
+      <div v-if="pending">
+        <ProductDetailSkeleton />
+      </div>
+      <div v-else-if="product">
         <ProductDetail :product="product" />
-        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -24,7 +38,6 @@ import ProductDetailSkeleton from '~/components/ProductDetailSkeleton.vue';
 const route = useRoute();
 const id = route.params.id;
 const url = `/api/products/${id}`;
-
 
 const { data: product, pending, error } = await useFetch<Product>(url, { lazy: true });
 

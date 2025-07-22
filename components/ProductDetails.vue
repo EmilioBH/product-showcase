@@ -2,12 +2,22 @@
 <template>
   <div class="product-detail">
     <div class="product-detail__image-container">
-      <img :src="product.image" :alt="product.name" class="product-detail__image" />
+      <img
+        :src="product.image"
+        :alt="product.name"
+        class="product-detail__image"
+      >
     </div>
     <div class="product-detail__info">
-      <h1 class="product-detail__name">{{ product.name }}</h1>
-      <p class="product-detail__description">{{ product.description }}</p>
-      <p class="product-detail__price">{{ formatCurrency(product.price) }}</p>
+      <h1 class="product-detail__name">
+        {{ product.name }}
+      </h1>
+      <p class="product-detail__description">
+        {{ product.description }}
+      </p>
+      <p class="product-detail__price">
+        {{ formatCurrency(product.price) }}
+      </p>
     </div>
   </div>
 </template>
