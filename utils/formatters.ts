@@ -8,8 +8,6 @@ export const formatCurrency = (price: number): string => {
     ? navigator.language
     : 'es-ES';
 
-  console.log('LOCALE UTILIZADO DURANTE EL TEST:', locale);
-
   return new Intl.NumberFormat(locale, {
     style: 'currency',
     currency: 'EUR',

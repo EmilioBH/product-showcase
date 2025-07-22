@@ -69,13 +69,13 @@ const { data: products, pending, error } = await useFetch<Product[]>('/api/produ
   gap: var(--spacing-unit-l);
 
   /* --- Tablet & Desktop Styles --- */
-  @media (min-width: $breakpoint-md) {
+  @include tablet {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-unit-xl); 
   }
 
   /* --- Big Desktop Styles --- */
-  @media (min-width: $breakpoint-xl) {
+  @include desktop {
     grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-unit-xl); 
   }
