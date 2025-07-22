@@ -20,24 +20,32 @@ defineProps<{
 </script>
 
 <style lang="scss" scoped>
+@use '~/assets/scss/utils/mixins' as *;
+
 .product-card-link {
   text-decoration: none;
   color: inherit;
   display: block;
+  border-radius: var(--border-radius);
+
+  // Aplicamos el mixin para un foco accesible
+  @include focus-visible-ring;
 }
 
 .product-card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  background-color: var(--color-light);
+
+  height: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  background-color: #fff;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--box-shadow);
   }
 
   &__image {
@@ -47,7 +55,7 @@ defineProps<{
   }
 
   &__content {
-    padding: 1rem;
+    padding: var(--spacing-unit-s);
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -57,7 +65,7 @@ defineProps<{
   &__name {
     font-size: 1.1rem;
     font-weight: 600;
-    margin: 0 0 0.5rem;
+    margin: 0 0 var(--spacing-unit-xs);
     color: var(--color-headings);
   }
 

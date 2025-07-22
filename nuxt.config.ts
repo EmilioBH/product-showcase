@@ -1,9 +1,7 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
   
-  // Make SCSS variables and mixins available globally
-  css: ['~/styles/main.scss'],
+  css: ['~/assets/scss/main.scss'],
 
   modules: [
     '@nuxtjs/google-fonts',
@@ -20,7 +18,10 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: '@import "~/styles/_variables.scss"; @import "~/styles/_mixins.scss";'
+          additionalData: `
+            @use "~/assets/scss/utils/_config.scss" as *;
+            @use "~/assets/scss/utils/_mixins.scss" as *;
+          `
         }
       }
     }
@@ -28,5 +29,9 @@ export default defineNuxtConfig({
   
   typescript: {
     strict: true,
-  }
+  },
+
+  nitro: {
+    compatibilityDate: '2025-07-21'
+  },
 })

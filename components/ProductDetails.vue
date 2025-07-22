@@ -21,38 +21,42 @@ defineProps<{
 </script>
 
 <style lang="scss" scoped>
+@use '~/assets/scss/utils/mixins' as *;
+
 .product-detail {
   display: grid;
-  gap: 2rem;
+  gap: var(--spacing-unit-l);
   max-width: 900px;
-  margin: 2rem auto;
+  margin: var(--spacing-unit-l) auto;
 
-  @media (min-width: 768px) {
+  @include tablet {
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: var(--spacing-unit-xxl);
     align-items: center;
   }
 
   &__image {
     width: 100%;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
   }
 
   &__name {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: var(--spacing-unit-m);
+    color: var(--color-headings);
   }
 
   &__description {
     font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 2rem;
+    line-height: var(--line-height-base);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-unit-l);
   }
   
   &__price {
     font-size: 2rem;
     font-weight: bold;
-    color: var(--color-primary, #3498db);
+    color: var(--color-primary);
   }
 }
 </style>
