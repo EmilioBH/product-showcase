@@ -34,7 +34,7 @@ const { data: products, pending, error } = await useFetch<Product[]>('/api/produ
 @use '~/assets/scss/utils/mixins' as *;
 
 .page-title {
-  margin-bottom: var(--spacing-unit-m);
+  margin: var(--spacing-unit-xl) 0;
   text-align: center;
   color: var(--color-headings);
 }
@@ -71,6 +71,12 @@ const { data: products, pending, error } = await useFetch<Product[]>('/api/produ
   /* --- Tablet & Desktop Styles --- */
   @media (min-width: $breakpoint-md) {
     grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-unit-xl); 
+  }
+
+  /* --- Big Desktop Styles --- */
+  @media (min-width: $breakpoint-xl) {
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-unit-xl); 
   }
 }

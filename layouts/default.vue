@@ -62,7 +62,7 @@
   color: var(--color-primary);
 
   &:hover {
-    text-decoration: underline;
+    text-decoration: none;
   }
   
   @include focus-visible-ring;
