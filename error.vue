@@ -6,7 +6,7 @@
       <p class="error-description">
         Sorry, the page you are looking for does not exist or has been moved.
       </p>
-      <button class="error-button" @click="handleClearError">
+      <button class="error-button" @click="handleClearError" aria-label="Go back to home page">
         Go Back Home
       </button>
     </div>

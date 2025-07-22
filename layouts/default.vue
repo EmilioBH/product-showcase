@@ -59,7 +59,7 @@
   font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
-  color: var(--color-primary);
+  color: var(--color-dark);
 
   &:hover {
     text-decoration: none;
