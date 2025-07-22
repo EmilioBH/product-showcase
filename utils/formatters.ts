@@ -4,7 +4,11 @@
  * @returns The formatted price as a string.
  */
 export const formatCurrency = (price: number): string => {
-  const locale = import.meta.client ? navigator.language : 'es-ES';
+  const locale = typeof navigator !== 'undefined'
+    ? navigator.language
+    : 'es-ES';
+
+  console.log('LOCALE UTILIZADO DURANTE EL TEST:', locale);
 
   return new Intl.NumberFormat(locale, {
     style: 'currency',
