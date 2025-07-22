@@ -1,75 +1,108 @@
-# Nuxt Minimal Starter
+# Product Showcase: A Product Display with Nuxt 3
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This project is a technical test that simulates a small e-commerce site, built to demonstrate **Frontend development skills** with modern technologies and **Server-Side Rendering (SSR)**. This repository contains a web application that presents a product listing and allows the user to navigate to dynamically generated detail pages. The main goal is to showcase a **clean, scalable, and accessible implementation** using the **Nuxt 3** framework.
 
-## Setup
+---
 
-Make sure to install dependencies:
+## ✨ Key Features
 
-```bash
-# npm
-npm install
+* **Server-Side Rendering (SSR):** Dynamic content optimized for SEO thanks to Nuxt 3.
+* **Dynamic Product Pages:** Routes generated on the fly for each product.
+* **Responsive Design:** Interface adaptable to different screen sizes.
+* **Accessibility:** Developed following **WCAG 2.1 Level AA** standards to ensure usability for the widest possible audience.
+* **Code Quality:** Clean and maintainable code with **ESLint** and a strict **TypeScript** configuration.
+* **Robust Testing:** Unit and integration test coverage with **Vitest**, and End-to-End tests with **Playwright**.
 
-# pnpm
-pnpm install
+---
 
-# yarn
-yarn install
+## 🛠️ Technologies Used
 
-# bun
-bun install
-```
+This project is built with a modern and efficient technology stack:
 
-## Development Server
+* **Framework:** Nuxt 3
+* **Language:** TypeScript
+* **Styles:** SASS (SCSS syntax)
+* **Unit/Integration Testing:** Vitest and Vue Test Utils
+* **End-to-End (E2E) Testing:** Playwright
+* **Linting:** ESLint
+* **Accessibility Standards:** WCAG 2.1 AA
 
-Start the development server on `http://localhost:3000`:
+---
 
-```bash
-# npm
-npm run dev
+## 🚀 Installation and Setup
 
-# pnpm
-pnpm dev
+To run this project in your local environment, follow these steps.
 
-# yarn
-yarn dev
+### Prerequisites
 
-# bun
-bun run dev
-```
+Make sure you have the following tools installed:
 
-## Production
+* **Node.js:** v20.19.2 or a compatible v20.x version.
+* **pnpm:** v10.13.1 or higher. If you don't have it, you can install it with `npm install -g pnpm`.
 
-Build the application for production:
+### Installation Steps
 
-```bash
-# npm
-npm run build
+1.  **Clone the repository:**
 
-# pnpm
-pnpm build
+    ```bash
+    git clone git@github.com:EmilioBH/product-showcase.git
+    ```
 
-# yarn
-yarn build
+2.  **Navigate to the project directory:**
 
-# bun
-bun run build
-```
+    ```bash
+    cd product-showcase
+    ```
 
-Locally preview production build:
+3.  **Install dependencies:**
 
-```bash
-# npm
-npm run preview
+    ```bash
+    pnpm install
+    ```
 
-# pnpm
-pnpm preview
+    (This command will read the `pnpm-lock.yaml` file to install the exact package versions, ensuring a consistent installation.)
 
-# yarn
-yarn preview
+### Available Scripts
 
-# bun
-bun run preview
-```
+You can use the following pnpm scripts to interact with the project:
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+* **Start in development mode:**
+
+    ```bash
+    pnpm dev
+    ```
+
+    Starts the application at `http://localhost:3000` with Hot-Reloading.
+
+* **Run unit tests:**
+
+    ```bash
+    pnpm test
+    ```
+
+    Launches Vitest to run all unit and integration tests.
+
+* **Check and fix code (Linting):**
+
+    ```bash
+    pnpm lint
+    ```
+
+    Uses ESLint to analyze the code for errors and style issues, attempting to fix them automatically.
+
+* **Build for production:**
+
+    ```bash
+    pnpm build
+    ```
+
+    Compiles and optimizes the application for production deployment.
+
+---
+
+## 👤 Author
+
+* **Name/Alias:** EmilioBH
+* **GitHub:** [@EmilioBH](https://github.com/EmilioBH)
+
+---
