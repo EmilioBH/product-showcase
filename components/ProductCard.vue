@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink :to="`/products/${product.id}`" class="product-card-link">
+  <NuxtLink :to="`/products/${product.id}`" class="product-card-link" :aria-label="`Go to the ${product.name} detail page`">
     <article class="product-card">
       <img class="product-card__image" :src="product.image" :alt="product.name" />
       <div class="product-card__content">
@@ -63,14 +63,14 @@ defineProps<{
   }
 
   &__name {
-    font-size: 1.1rem;
+    font-size: calc(var(--spacing-unit-m)*1.5);
     font-weight: 600;
     margin: 0 0 var(--spacing-unit-xs);
     color: var(--color-headings);
   }
 
   &__price {
-    font-size: 1.2rem;
+    font-size: var(--spacing-unit-l);
     font-weight: bold;
     color: var(--color-primary);
     margin: 0;
