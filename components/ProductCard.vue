@@ -1,10 +1,22 @@
 <template>
-  <NuxtLink :to="`/products/${product.id}`" class="product-card-link" :aria-label="`Go to the ${product.name} detail page`">
+  <NuxtLink
+    :to="`/products/${product.id}`"
+    class="product-card-link"
+    :aria-label="`Go to the ${product.name} detail page`"
+  >
     <article class="product-card">
-      <img class="product-card__image" :src="product.image" :alt="product.name" />
+      <img
+        class="product-card__image"
+        :src="product.image"
+        :alt="product.name"
+      >
       <div class="product-card__content">
-        <h2 class="product-card__name">{{ product.name }}</h2>
-        <p class="product-card__price">{{ formatCurrency(product.price) }}</p>
+        <h2 class="product-card__name">
+          {{ product.name }}
+        </h2>
+        <p class="product-card__price">
+          {{ formatCurrency(product.price) }}
+        </p>
       </div>
     </article>
   </NuxtLink>  

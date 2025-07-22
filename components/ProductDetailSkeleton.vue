@@ -1,11 +1,11 @@
 <template>
   <div class="detail-skeleton">
-    <div class="skeleton-box detail-skeleton__image-container"></div>
+    <div class="skeleton-box detail-skeleton__image-container" />
     <div class="detail-skeleton__info">
-      <div class="skeleton-box detail-skeleton__info--title"></div>
-      <div class="skeleton-box detail-skeleton__info--text"></div>
-      <div class="skeleton-box detail-skeleton__info--text short"></div>
-      <div class="skeleton-box detail-skeleton__info--price"></div>
+      <div class="skeleton-box detail-skeleton__info--title" />
+      <div class="skeleton-box detail-skeleton__info--text" />
+      <div class="skeleton-box detail-skeleton__info--text short" />
+      <div class="skeleton-box detail-skeleton__info--price" />
     </div>
   </div>
 </template>

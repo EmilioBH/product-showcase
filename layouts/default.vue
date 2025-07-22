@@ -2,11 +2,14 @@
   <div class="layout-wrapper">
     <header class="header">
       <div class="container header__container">
-        <NuxtLink to="/" class="brand" aria-label="ProductShowcase Home">
+        <NuxtLink
+          to="/"
+          class="brand"
+          aria-label="ProductShowcase Home"
+        >
           ProductShowcase
         </NuxtLink>
-        <nav aria-label="Main navigation">
-        </nav>
+        <nav aria-label="Main navigation" />
       </div>
     </header>
 
