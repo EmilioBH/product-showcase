@@ -10,7 +10,7 @@ export default defineEventHandler(async (event) => {
   const product = products.find(p => p.id === id);
 
   // Simulate a network delay
-  await new Promise(resolve => setTimeout(resolve, 500));
+  await new Promise(resolve => setTimeout(resolve, 5000));
 
   if (!product) {
     throw createError({

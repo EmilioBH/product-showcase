@@ -44,6 +44,8 @@ useHead({
 <style lang="scss" scoped>
 .page-container {
   max-width: 940px;
+  margin: 0 auto;
+  padding: var(--spacing-unit-m);
 }
 
 .back-link {
@@ -55,12 +57,13 @@ useHead({
   transition: background-color 0.2s ease-in-out;
   
   svg {
-    width: 24px;
-    height: 24px;
+    color: var(--color-primary);
+    width: var(--spacing-unit-l);
+    height: var(--spacing-unit-l);
   }
 
   &:hover {
-    background-color: #f0f0f0;
+    background-color: var(--color-background-secondary);
   }
 }
 </style>

@@ -33,19 +33,19 @@
 
 .main-content {
   flex-grow: 1;
-  padding-top: calc(var(--spacing-unit) * 2);
-  padding-bottom: calc(var(--spacing-unit) * 2);
+  padding-top: var(--spacing-unit-l);
+  padding-bottom: var(--spacing-unit-l);
 
   @include tablet {
-    padding-top: calc(var(--spacing-unit) * 3);
-    padding-bottom: calc(var(--spacing-unit) * 3);
+    padding-top: var(--spacing-unit-xl);
+    padding-bottom: var(--spacing-unit-xl);
   }
 }
 
 .header {
   background-color: var(--color-background-secondary);
   box-shadow: var(--box-shadow);
-  padding: var(--spacing-unit) 0;
+  padding: var(--spacing-unit-m) 0;
   border-bottom: 1px solid var(--color-border);
 
   &__container {
@@ -71,13 +71,14 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 var(--spacing-unit);
+  padding: 0 var(--spacing-unit-m);
 }
 
 .footer {
   text-align: center;
-  padding: calc(var(--spacing-unit) * 1.5) 0;
+  padding: calc(var(--spacing-unit-m) * 1.5) 0;
   background-color: var(--color-background-secondary);
   color: var(--color-text-secondary);
+  margin-top: var(--spacing-unit-xxl);
 }
 </style>

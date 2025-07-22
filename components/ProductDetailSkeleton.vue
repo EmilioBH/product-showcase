@@ -1,55 +1,57 @@
 <template>
-  <div class="product-detail-skeleton">
-    <div class="product-detail-skeleton__image-container">
-      <div class="skeleton-box skeleton-image"></div>
-    </div>
-    <div class="product-detail-skeleton__info">
-      <div class="skeleton-box skeleton-title"></div>
-      <div class="skeleton-box skeleton-text"></div>
-      <div class="skeleton-box skeleton-text short"></div>
-      <div class="skeleton-box skeleton-price"></div>
+  <div class="detail-skeleton">
+    <div class="skeleton-box detail-skeleton__image-container"></div>
+    <div class="detail-skeleton__info">
+      <div class="skeleton-box detail-skeleton__info--title"></div>
+      <div class="skeleton-box detail-skeleton__info--text"></div>
+      <div class="skeleton-box detail-skeleton__info--text short"></div>
+      <div class="skeleton-box detail-skeleton__info--price"></div>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.product-detail-skeleton {
-  display: grid;
-  gap: 2rem;
-  max-width: 900px;
-  margin: 2rem auto;
+@use '~/assets/scss/utils/mixins' as *;
 
-  @media (min-width: 768px) {
+.detail-skeleton {
+  display: grid;
+  gap: var(--spacing-unit-l);
+  width: 900px;
+  margin: var(--spacing-unit-l) auto;
+
+  @include tablet {
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: var(--spacing-unit-xxl);
     align-items: center;
   }
-}
 
-.skeleton-image {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-}
-
-.skeleton-title {
-  height: 2.5rem;
-  width: 70%;
-  margin-bottom: 1.5rem;
-}
-
-.skeleton-text {
-  height: 1.1rem;
-  width: 100%;
-  margin-bottom: 1rem;
-
-  &.short {
-    width: 80%;
+  &__image-container {
+    width: 100%;
+    aspect-ratio: 1 / 1;
   }
-}
+  
+  &__info {
+    &--title {
+      height: 2.5rem;
+      width: 70%;
+      margin-bottom: calc(var(--spacing-unit-m) * 1.5);
+    }
 
-.skeleton-price {
-  height: 2rem;
-  width: 40%;
-  margin-top: 2rem;
+    &--text {
+      height: 1.1rem;
+      width: 100%;
+      margin-bottom: var(--spacing-unit-m);
+
+      &.short {
+        width: 80%;
+      }
+    }
+
+    &--price {
+      height: 2rem;
+      width: 40%;
+      margin-top: var(--spacing-unit-l);
+    }
+  }
 }
 </style>

@@ -31,15 +31,17 @@ const { data: products, pending, error } = await useFetch<Product[]>('/api/produ
 </script>
 
 <style lang="scss" scoped>
+@use '~/assets/scss/utils/mixins' as *;
+
 .page-title {
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-unit-m);
   text-align: center;
   color: var(--color-headings);
 }
 
 .intro-text {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: var(--spacing-unit-xxl);
   color: var(--color-text-secondary);
   max-width: 600px;
   margin-left: auto;
@@ -48,11 +50,11 @@ const { data: products, pending, error } = await useFetch<Product[]>('/api/produ
 
 .state-container {
   text-align: center;
-  padding: 3rem;
+  padding: var(--spacing-unit-xxl);
   font-size: 1.2rem;
 
   &.error {
-    color: #e74c3c;
+    color: var(--color-error);
   }
 }
 
@@ -60,16 +62,16 @@ const { data: products, pending, error } = await useFetch<Product[]>('/api/produ
   display: grid;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 var(--spacing-unit-m);
   
   /* --- Mobile First Styles (Base) --- */
   grid-template-columns: 1fr;
-  gap: 1.5rem;
+  gap: var(--spacing-unit-l);
 
   /* --- Tablet & Desktop Styles --- */
-  @media (min-width: 768px) {
+  @media (min-width: $breakpoint-md) {
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem; 
+    gap: var(--spacing-unit-xl); 
   }
 }
 </style>
