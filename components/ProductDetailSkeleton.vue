@@ -16,8 +16,9 @@
 .detail-skeleton {
   display: grid;
   gap: var(--spacing-unit-l);
-  width: 900px;
+  max-width: 900px;
   margin: var(--spacing-unit-l) auto;
+  padding: 0 var(--spacing-unit-xl);
 
   @include tablet {
     grid-template-columns: 1fr 1fr;

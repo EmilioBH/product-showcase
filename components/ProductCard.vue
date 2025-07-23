@@ -40,7 +40,7 @@ defineProps<{
   display: block;
   border-radius: var(--border-radius);
 
-  // Aplicamos el mixin para un foco accesible
+  // Add mixin to do an accesible focus
   @include focus-visible-ring;
 }
 

@@ -2,7 +2,7 @@
   <div class="page-container">
     <NuxtLink
       to="/"
-      class="back-link"
+      class="page-container__back-link"
       aria-label="Come back to the product list"
     >
       <svg
@@ -59,24 +59,24 @@ useHead({
   max-width: 940px;
   margin: 0 auto;
   padding: var(--spacing-unit-m);
-}
 
-.back-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5rem;
-  border-radius: 50%;
-  transition: background-color 0.2s ease-in-out;
-  
-  svg {
-    color: var(--color-primary);
-    width: var(--spacing-unit-l);
-    height: var(--spacing-unit-l);
-  }
+  &__back-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: background-color 0.2s ease-in-out;
+    
+    svg {
+      color: var(--color-primary);
+      width: var(--spacing-unit-l);
+      height: var(--spacing-unit-l);
+    }
 
-  &:hover {
-    background-color: var(--color-background-secondary);
+    &:hover {
+      background-color: var(--color-background-secondary);
+    }
   }
 }
 </style>

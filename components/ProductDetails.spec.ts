@@ -21,18 +21,18 @@ describe('ProductDetail', () => {
       },
     });
 
-    const image = wrapper.find('.product-detail__image');
+    const image = wrapper.find('.product-detail__image-container--image');
     expect(image.exists()).toBe(true);
     expect(image.attributes('src')).toBe(mockProduct.image);
     expect(image.attributes('alt')).toBe(mockProduct.name);
 
-    const name = wrapper.find('.product-detail__name');
+    const name = wrapper.find('.product-detail__info--name');
     expect(name.text()).toBe(mockProduct.name);
 
-    const description = wrapper.find('.product-detail__description');
+    const description = wrapper.find('.product-detail__info--description');
     expect(description.text()).toBe(mockProduct.description);
 
-    const price = wrapper.find('.product-detail__price');
+    const price = wrapper.find('.product-detail__info--price');
     const expectedPrice = formatCurrency(mockProduct.price);
     expect(price.text()).toBe(expectedPrice);
   });
