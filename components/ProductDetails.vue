@@ -5,17 +5,17 @@
       <img
         :src="product.image"
         :alt="product.name"
-        class="product-detail__image"
+        class="product-detail__image-container--image"
       >
-    </div>
+    </div >
     <div class="product-detail__info">
-      <h1 class="product-detail__name">
+      <h1 class="product-detail__info--name">
         {{ product.name }}
       </h1>
-      <p class="product-detail__description">
+      <p class="product-detail__info--description">
         {{ product.description }}
       </p>
-      <p class="product-detail__price">
+      <p class="product-detail__info--price">
         {{ formatCurrency(product.price) }}
       </p>
     </div>
@@ -38,6 +38,7 @@ defineProps<{
   gap: var(--spacing-unit-l);
   max-width: 900px;
   margin: var(--spacing-unit-l) auto;
+  padding: 0 var(--spacing-unit-xl);
 
   @include tablet {
     grid-template-columns: 1fr 1fr;
@@ -45,28 +46,33 @@ defineProps<{
     align-items: center;
   }
 
-  &__image {
-    width: 100%;
-    border-radius: var(--border-radius);
+  &__image-container {
+    &--image {
+      width: 100%;
+      border-radius: var(--border-radius);
+    }
   }
 
-  &__name {
-    font-size: 2.5rem;
-    margin-bottom: var(--spacing-unit-m);
-    color: var(--color-headings);
-  }
+  &__info {
 
-  &__description {
-    font-size: 1.1rem;
-    line-height: var(--line-height-base);
-    color: var(--color-text-secondary);
-    margin-bottom: var(--spacing-unit-l);
-  }
-  
-  &__price {
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--color-primary);
+    &--name {
+      font-size: 2.5rem;
+      margin-bottom: var(--spacing-unit-m);
+      color: var(--color-headings);
+    }
+
+    &--description {
+      font-size: 1.1rem;
+      line-height: var(--line-height-base);
+      color: var(--color-text-secondary);
+      margin-bottom: var(--spacing-unit-l);
+    }
+    
+    &--price {
+      font-size: 2rem;
+      font-weight: bold;
+      color: var(--color-primary);
+    }
   }
 }
 </style>

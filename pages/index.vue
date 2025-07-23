@@ -75,7 +75,7 @@ const { data: products, pending, error } = await useFetch<Product[]>('/api/produ
   display: grid;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 var(--spacing-unit-m);
+  padding: 0 var(--spacing-unit-xxl);
   
   /* --- Mobile First Styles (Base) --- */
   grid-template-columns: 1fr;

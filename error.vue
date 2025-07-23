@@ -1,24 +1,22 @@
 <template>
   <div class="error-page">
-    <div class="error-content">
-      <p class="error-status-code">
+      <p class="error-page__status-code">
         {{ error.statusCode }}
       </p>
-      <h1 class="error-title">
+      <h1 class="error-page__title">
         Page Not Found
       </h1>
-      <p class="error-description">
+      <p class="error-page__description">
         Sorry, the page you are looking for does not exist or has been moved.
       </p>
       <button
-        class="error-button"
+        class="error-page__button"
         aria-label="Go back to home page"
         @click="handleClearError"
       >
         Go Back Home
       </button>
     </div>
-  </div>
 </template>
 
 <script setup lang="ts">
@@ -43,40 +41,40 @@ const handleClearError = () => {
   text-align: center;
   min-height: 80vh;
   font-family: var(--font-family-main);
-}
 
-.error-status-code {
-  font-size: 8rem;
-  font-weight: 800;
-  color: var(--color-primary, #3498db);
-  line-height: 1;
-}
+  &__status-code {
+    font-size: 8rem;
+    font-weight: 800;
+    color: var(--color-primary, #3498db);
+    line-height: 1;
+  }
 
-.error-title {
-  font-size: 2rem;
-  font-weight: 600;
-  margin: 1rem 0;
-}
+  &__title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 1rem 0;
+  }
 
-.error-description {
-  font-size: 1.1rem;
-  color: var(--color-text-secondary);
-  margin-bottom: 2.5rem;
-}
+  &__description {
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 2.5rem;
+  }
 
-.error-button {
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #fff;
-  background-color: var(--color-primary, #3498db);
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
+  &__button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: var(--color-primary, #3498db);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
 
-  &:hover {
-    background-color: #2980b9;
+    &:hover {
+      background-color: #2980b9;
+    }
   }
 }
 </style>
