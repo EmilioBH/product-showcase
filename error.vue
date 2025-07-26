@@ -36,6 +36,7 @@ const handleClearError = () => {
 <style lang="scss" scoped>
 .error-page {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
